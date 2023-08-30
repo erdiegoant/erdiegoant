@@ -14,13 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory()->create([
+        User::create([
             'name' => 'Diego Barrera',
             'email' => 'erdiegoant@gmail.com',
             'password' => bcrypt('TFNAmHiHuAW8io4o^V'),
         ]);
 
-        SiteSettings::factory()->create([
+        SiteSettings::create([
             'title' => 'Diego Barrera',
             'description' => 'I am a Full-Stack Software Developer in love with Laravel and Flutter.',
             'content' => [
