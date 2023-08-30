@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="I am a Senior Software Developer in love with Laravel and Flutter.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Diego Barrera">
+    <meta property="og:description" content="I am a Senior Software Developer in love with Laravel and Flutter.">
+    {{--    <meta property="og:image" content="https://tpetry.me/social.png">--}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Diego Barrera">
+    <meta name="twitter:description" content="I am a Senior Software Developer in love with Laravel and Flutter.">
+    {{--    <meta name="twitter:image" content="https://tpetry.me/social.png">--}}
 
     <title>{{ config('app.name') }}</title>
 
@@ -11,1343 +21,240 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
 
     <!-- Styles -->
-    <style>
-        /* ! tailwindcss v3.3.3 | MIT License | https://tailwindcss.com */
-        *, ::after, ::before {
-            box-sizing: border-box;
-            border-width: 0;
-            border-style: solid;
-            border-color: #e5e7eb
-        }
-
-        ::after, ::before {
-            --tw-content: ''
-        }
-
-        html {
-            line-height: 1.5;
-            -webkit-text-size-adjust: 100%;
-            -moz-tab-size: 4;
-            tab-size: 4;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-            font-feature-settings: normal;
-            font-variation-settings: normal
-        }
-
-        body {
-            margin: 0;
-            line-height: inherit
-        }
-
-        hr {
-            height: 0;
-            color: inherit;
-            border-top-width: 1px
-        }
-
-        abbr:where([title]) {
-            -webkit-text-decoration: underline dotted;
-            text-decoration: underline dotted
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-size: inherit;
-            font-weight: inherit
-        }
-
-        a {
-            color: inherit;
-            text-decoration: inherit
-        }
-
-        b, strong {
-            font-weight: bolder
-        }
-
-        code, kbd, pre, samp {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-size: 1em
-        }
-
-        small {
-            font-size: 80%
-        }
-
-        sub, sup {
-            font-size: 75%;
-            line-height: 0;
-            position: relative;
-            vertical-align: baseline
-        }
-
-        sub {
-            bottom: -.25em
-        }
-
-        sup {
-            top: -.5em
-        }
-
-        table {
-            text-indent: 0;
-            border-color: inherit;
-            border-collapse: collapse
-        }
-
-        button, input, optgroup, select, textarea {
-            font-family: inherit;
-            font-feature-settings: inherit;
-            font-variation-settings: inherit;
-            font-size: 100%;
-            font-weight: inherit;
-            line-height: inherit;
-            color: inherit;
-            margin: 0;
-            padding: 0
-        }
-
-        button, select {
-            text-transform: none
-        }
-
-        [type=button], [type=reset], [type=submit], button {
-            -webkit-appearance: button;
-            background-color: transparent;
-            background-image: none
-        }
-
-        :-moz-focusring {
-            outline: auto
-        }
-
-        :-moz-ui-invalid {
-            box-shadow: none
-        }
-
-        progress {
-            vertical-align: baseline
-        }
-
-        ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
-            height: auto
-        }
-
-        [type=search] {
-            -webkit-appearance: textfield;
-            outline-offset: -2px
-        }
-
-        ::-webkit-search-decoration {
-            -webkit-appearance: none
-        }
-
-        ::-webkit-file-upload-button {
-            -webkit-appearance: button;
-            font: inherit
-        }
-
-        summary {
-            display: list-item
-        }
-
-        blockquote, dd, dl, figure, h1, h2, h3, h4, h5, h6, hr, p, pre {
-            margin: 0
-        }
-
-        fieldset {
-            margin: 0;
-            padding: 0
-        }
-
-        legend {
-            padding: 0
-        }
-
-        menu, ol, ul {
-            list-style: none;
-            margin: 0;
-            padding: 0
-        }
-
-        dialog {
-            padding: 0
-        }
-
-        textarea {
-            resize: vertical
-        }
-
-        input::placeholder, textarea::placeholder {
-            opacity: 1;
-            color: #9ca3af
-        }
-
-        [role=button], button {
-            cursor: pointer
-        }
-
-        :disabled {
-            cursor: default
-        }
-
-        audio, canvas, embed, iframe, img, object, svg, video {
-            display: block;
-            vertical-align: middle
-        }
-
-        img, video {
-            max-width: 100%;
-            height: auto
-        }
-
-        [hidden] {
-            display: none
-        }
-
-        *, ::before, ::after {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
-        }
-
-        ::backdrop {
-            --tw-border-spacing-x: 0;
-            --tw-border-spacing-y: 0;
-            --tw-translate-x: 0;
-            --tw-translate-y: 0;
-            --tw-rotate: 0;
-            --tw-skew-x: 0;
-            --tw-skew-y: 0;
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            --tw-pan-x: ;
-            --tw-pan-y: ;
-            --tw-pinch-zoom: ;
-            --tw-scroll-snap-strictness: proximity;
-            --tw-gradient-from-position: ;
-            --tw-gradient-via-position: ;
-            --tw-gradient-to-position: ;
-            --tw-ordinal: ;
-            --tw-slashed-zero: ;
-            --tw-numeric-figure: ;
-            --tw-numeric-spacing: ;
-            --tw-numeric-fraction: ;
-            --tw-ring-inset: ;
-            --tw-ring-offset-width: 0px;
-            --tw-ring-offset-color: #fff;
-            --tw-ring-color: rgb(59 130 246 / 0.5);
-            --tw-ring-offset-shadow: 0 0 #0000;
-            --tw-ring-shadow: 0 0 #0000;
-            --tw-shadow: 0 0 #0000;
-            --tw-shadow-colored: 0 0 #0000;
-            --tw-blur: ;
-            --tw-brightness: ;
-            --tw-contrast: ;
-            --tw-grayscale: ;
-            --tw-hue-rotate: ;
-            --tw-invert: ;
-            --tw-saturate: ;
-            --tw-sepia: ;
-            --tw-drop-shadow: ;
-            --tw-backdrop-blur: ;
-            --tw-backdrop-brightness: ;
-            --tw-backdrop-contrast: ;
-            --tw-backdrop-grayscale: ;
-            --tw-backdrop-hue-rotate: ;
-            --tw-backdrop-invert: ;
-            --tw-backdrop-opacity: ;
-            --tw-backdrop-saturate: ;
-            --tw-backdrop-sepia:
-        }
-
-        .container {
-            width: 100%
-        }
-
-        @media (min-width: 640px) {
-            .container {
-                max-width: 640px
-            }
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                max-width: 768px
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .container {
-                max-width: 1024px
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .container {
-                max-width: 1280px
-            }
-        }
-
-        @media (min-width: 1536px) {
-            .container {
-                max-width: 1536px
-            }
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0
-        }
-
-        .fixed {
-            position: fixed
-        }
-
-        .absolute {
-            position: absolute
-        }
-
-        .relative {
-            position: relative
-        }
-
-        .inset-0 {
-            inset: 0px
-        }
-
-        .bottom-0 {
-            bottom: 0px
-        }
-
-        .left-0 {
-            left: 0px
-        }
-
-        .right-0 {
-            right: 0px
-        }
-
-        .top-0 {
-            top: 0px
-        }
-
-        .z-0 {
-            z-index: 0
-        }
-
-        .z-10 {
-            z-index: 10
-        }
-
-        .z-50 {
-            z-index: 50
-        }
-
-        .order-1 {
-            order: 1
-        }
-
-        .-mx-3 {
-            margin-left: -0.75rem;
-            margin-right: -0.75rem
-        }
-
-        .mx-auto {
-            margin-left: auto;
-            margin-right: auto
-        }
-
-        .-mb-1 {
-            margin-bottom: -0.25rem
-        }
-
-        .-ml-0 {
-            margin-left: -0px
-        }
-
-        .mb-12 {
-            margin-bottom: 3rem
-        }
-
-        .mb-3 {
-            margin-bottom: 0.75rem
-        }
-
-        .mb-4 {
-            margin-bottom: 1rem
-        }
-
-        .mt-1 {
-            margin-top: 0.25rem
-        }
-
-        .mt-16 {
-            margin-top: 4rem
-        }
-
-        .mt-3 {
-            margin-top: 0.75rem
-        }
-
-        .mt-4 {
-            margin-top: 1rem
-        }
-
-        .mt-8 {
-            margin-top: 2rem
-        }
-
-        .mb-5 {
-            margin-bottom: 1.25rem
-        }
-
-        .ml-5 {
-            margin-left: 1.25rem
-        }
-
-        .mr-5 {
-            margin-right: 1.25rem
-        }
-
-        .box-content {
-            box-sizing: content-box
-        }
-
-        .block {
-            display: block
-        }
-
-        .inline-block {
-            display: inline-block
-        }
-
-        .flex {
-            display: flex
-        }
-
-        .inline-flex {
-            display: inline-flex
-        }
-
-        .h-0 {
-            height: 0px
-        }
-
-        .h-0\.5 {
-            height: 0.125rem
-        }
-
-        .h-1 {
-            height: 0.25rem
-        }
-
-        .h-10 {
-            height: 2.5rem
-        }
-
-        .h-4 {
-            height: 1rem
-        }
-
-        .h-6 {
-            height: 1.5rem
-        }
-
-        .h-8 {
-            height: 2rem
-        }
-
-        .h-full {
-            height: 100%
-        }
-
-        .min-h-screen {
-            min-height: 100vh
-        }
-
-        .w-10 {
-            width: 2.5rem
-        }
-
-        .w-4 {
-            width: 1rem
-        }
-
-        .w-6 {
-            width: 1.5rem
-        }
-
-        .w-8 {
-            width: 2rem
-        }
-
-        .w-auto {
-            width: auto
-        }
-
-        .w-full {
-            width: 100%
-        }
-
-        .max-w-4xl {
-            max-width: 56rem
-        }
-
-        .max-w-6xl {
-            max-width: 72rem
-        }
-
-        .max-w-7xl {
-            max-width: 80rem
-        }
-
-        .max-w-md {
-            max-width: 28rem
-        }
-
-        .-translate-y-full {
-            --tw-translate-y: -100%;
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-        }
-
-        .translate-y-0 {
-            --tw-translate-y: 0px;
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-        }
-
-        .scale-0 {
-            --tw-scale-x: 0;
-            --tw-scale-y: 0;
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-        }
-
-        .scale-100 {
-            --tw-scale-x: 1;
-            --tw-scale-y: 1;
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-        }
-
-        .transform {
-            transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
-        }
-
-        .cursor-pointer {
-            cursor: pointer
-        }
-
-        .select-none {
-            -webkit-user-select: none;
-            user-select: none
-        }
-
-        .flex-col {
-            flex-direction: column
-        }
-
-        .flex-wrap {
-            flex-wrap: wrap
-        }
-
-        .items-center {
-            align-items: center
-        }
-
-        .items-stretch {
-            align-items: stretch
-        }
-
-        .justify-center {
-            justify-content: center
-        }
-
-        .justify-between {
-            justify-content: space-between
-        }
-
-        .space-x-3 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-x-reverse: 0;
-            margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-            margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))
-        }
-
-        .space-x-4 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-x-reverse: 0;
-            margin-right: calc(1rem * var(--tw-space-x-reverse));
-            margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)))
-        }
-
-        .space-x-5 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-x-reverse: 0;
-            margin-right: calc(1.25rem * var(--tw-space-x-reverse));
-            margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)))
-        }
-
-        .space-y-6 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-y-reverse: 0;
-            margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-            margin-bottom: calc(1.5rem * var(--tw-space-y-reverse))
-        }
-
-        .space-x-6 > :not([hidden]) ~ :not([hidden]) {
-            --tw-space-x-reverse: 0;
-            margin-right: calc(1.5rem * var(--tw-space-x-reverse));
-            margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))
-        }
-
-        .overflow-hidden {
-            overflow: hidden
-        }
-
-        .rounded {
-            border-radius: 0.25rem
-        }
-
-        .rounded-md {
-            border-radius: 0.375rem
-        }
-
-        .border {
-            border-width: 1px
-        }
-
-        .border-gray-800 {
-            --tw-border-opacity: 1;
-            border-color: rgb(31 41 55 / var(--tw-border-opacity))
-        }
-
-        .border-transparent {
-            border-color: transparent
-        }
-
-        .bg-blue-500 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(59 130 246 / var(--tw-bg-opacity))
-        }
-
-        .bg-gray-50 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(249 250 251 / var(--tw-bg-opacity))
-        }
-
-        .bg-gray-900 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(17 24 39 / var(--tw-bg-opacity))
-        }
-
-        .bg-indigo-600 {
-            --tw-bg-opacity: 1;
-            background-color: rgb(79 70 229 / var(--tw-bg-opacity))
-        }
-
-        .bg-white {
-            --tw-bg-opacity: 1;
-            background-color: rgb(255 255 255 / var(--tw-bg-opacity))
-        }
-
-        .bg-none {
-            background-image: none
-        }
-
-        .px-10 {
-            padding-left: 2.5rem;
-            padding-right: 2.5rem
-        }
-
-        .px-2 {
-            padding-left: 0.5rem;
-            padding-right: 0.5rem
-        }
-
-        .px-3 {
-            padding-left: 0.75rem;
-            padding-right: 0.75rem
-        }
-
-        .px-4 {
-            padding-left: 1rem;
-            padding-right: 1rem
-        }
-
-        .px-5 {
-            padding-left: 1.25rem;
-            padding-right: 1.25rem
-        }
-
-        .px-8 {
-            padding-left: 2rem;
-            padding-right: 2rem
-        }
-
-        .py-2 {
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem
-        }
-
-        .py-20 {
-            padding-top: 5rem;
-            padding-bottom: 5rem
-        }
-
-        .py-3 {
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem
-        }
-
-        .py-5 {
-            padding-top: 1.25rem;
-            padding-bottom: 1.25rem
-        }
-
-        .py-8 {
-            padding-top: 2rem;
-            padding-bottom: 2rem
-        }
-
-        .pb-10 {
-            padding-bottom: 2.5rem
-        }
-
-        .pt-32 {
-            padding-top: 8rem
-        }
-
-        .text-left {
-            text-align: left
-        }
-
-        .text-center {
-            text-align: center
-        }
-
-        .text-2xl {
-            font-size: 1.5rem;
-            line-height: 2rem
-        }
-
-        .text-3xl {
-            font-size: 1.875rem;
-            line-height: 2.25rem
-        }
-
-        .text-4xl {
-            font-size: 2.25rem;
-            line-height: 2.5rem
-        }
-
-        .text-base {
-            font-size: 1rem;
-            line-height: 1.5rem
-        }
-
-        .text-sm {
-            font-size: 0.875rem;
-            line-height: 1.25rem
-        }
-
-        .text-xl {
-            font-size: 1.25rem;
-            line-height: 1.75rem
-        }
-
-        .font-black {
-            font-weight: 900
-        }
-
-        .font-bold {
-            font-weight: 700
-        }
-
-        .font-extrabold {
-            font-weight: 800
-        }
-
-        .font-medium {
-            font-weight: 500
-        }
-
-        .leading-6 {
-            line-height: 1.5rem
-        }
-
-        .leading-none {
-            line-height: 1
-        }
-
-        .leading-tight {
-            line-height: 1.25
-        }
-
-        .tracking-tight {
-            letter-spacing: -0.025em
-        }
-
-        .text-black {
-            --tw-text-opacity: 1;
-            color: rgb(0 0 0 / var(--tw-text-opacity))
-        }
-
-        .text-gray-200 {
-            --tw-text-opacity: 1;
-            color: rgb(229 231 235 / var(--tw-text-opacity))
-        }
-
-        .text-gray-400 {
-            --tw-text-opacity: 1;
-            color: rgb(156 163 175 / var(--tw-text-opacity))
-        }
-
-        .text-gray-500 {
-            --tw-text-opacity: 1;
-            color: rgb(107 114 128 / var(--tw-text-opacity))
-        }
-
-        .text-gray-600 {
-            --tw-text-opacity: 1;
-            color: rgb(75 85 99 / var(--tw-text-opacity))
-        }
-
-        .text-gray-700 {
-            --tw-text-opacity: 1;
-            color: rgb(55 65 81 / var(--tw-text-opacity))
-        }
-
-        .text-gray-900 {
-            --tw-text-opacity: 1;
-            color: rgb(17 24 39 / var(--tw-text-opacity))
-        }
-
-        .text-green-500 {
-            --tw-text-opacity: 1;
-            color: rgb(34 197 94 / var(--tw-text-opacity))
-        }
-
-        .text-indigo-600 {
-            --tw-text-opacity: 1;
-            color: rgb(79 70 229 / var(--tw-text-opacity))
-        }
-
-        .text-pink-500 {
-            --tw-text-opacity: 1;
-            color: rgb(236 72 153 / var(--tw-text-opacity))
-        }
-
-        .text-purple-500 {
-            --tw-text-opacity: 1;
-            color: rgb(168 85 247 / var(--tw-text-opacity))
-        }
-
-        .text-red-500 {
-            --tw-text-opacity: 1;
-            color: rgb(239 68 68 / var(--tw-text-opacity))
-        }
-
-        .text-white {
-            --tw-text-opacity: 1;
-            color: rgb(255 255 255 / var(--tw-text-opacity))
-        }
-
-        .text-yellow-500 {
-            --tw-text-opacity: 1;
-            color: rgb(234 179 8 / var(--tw-text-opacity))
-        }
-
-        .antialiased {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale
-        }
-
-        .opacity-100 {
-            opacity: 1
-        }
-
-        .shadow {
-            --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .shadow-sm {
-            --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .shadow-xl {
-            --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-            --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
-            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
-        }
-
-        .transition {
-            transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 150ms
-        }
-
-        .duration-100 {
-            transition-duration: 100ms
-        }
-
-        .duration-150 {
-            transition-duration: 150ms
-        }
-
-        .duration-300 {
-            transition-duration: 300ms
-        }
-
-        .duration-200 {
-            transition-duration: 200ms
-        }
-
-        .ease-out {
-            transition-timing-function: cubic-bezier(0, 0, 0.2, 1)
-        }
-
-        .ease-in {
-            transition-timing-function: cubic-bezier(0.4, 0, 1, 1)
-        }
-
-        .ease-in-out {
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-        }
-
-        .hover\:bg-gray-800:hover {
-            --tw-bg-opacity: 1;
-            background-color: rgb(31 41 55 / var(--tw-bg-opacity))
-        }
-
-        .hover\:bg-indigo-700:hover {
-            --tw-bg-opacity: 1;
-            background-color: rgb(67 56 202 / var(--tw-bg-opacity))
-        }
-
-        .hover\:bg-indigo-500:hover {
-            --tw-bg-opacity: 1;
-            background-color: rgb(99 102 241 / var(--tw-bg-opacity))
-        }
-
-        .hover\:text-gray-500:hover {
-            --tw-text-opacity: 1;
-            color: rgb(107 114 128 / var(--tw-text-opacity))
-        }
-
-        .hover\:text-gray-900:hover {
-            --tw-text-opacity: 1;
-            color: rgb(17 24 39 / var(--tw-text-opacity))
-        }
-
-        .focus\:outline-none:focus {
-            outline: 2px solid transparent;
-            outline-offset: 2px
-        }
-
-        .focus\:ring-2:focus {
-            --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-            --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-            box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
-        }
-
-        .focus\:ring-indigo-600:focus {
-            --tw-ring-opacity: 1;
-            --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity))
-        }
-
-        .focus\:ring-offset-2:focus {
-            --tw-ring-offset-width: 2px
-        }
-
-        @media (min-width: 640px) {
-            .sm\:ml-4 {
-                margin-left: 1rem
-            }
-
-            .sm\:ml-auto {
-                margin-left: auto
-            }
-
-            .sm\:mt-0 {
-                margin-top: 0px
-            }
-
-            .sm\:max-w-sm {
-                max-width: 24rem
-            }
-
-            .sm\:flex-row {
-                flex-direction: row
-            }
-
-            .sm\:justify-start {
-                justify-content: flex-start
-            }
-
-            .sm\:border-l {
-                border-left-width: 1px
-            }
-
-            .sm\:border-gray-200 {
-                --tw-border-opacity: 1;
-                border-color: rgb(229 231 235 / var(--tw-border-opacity))
-            }
-
-            .sm\:px-20 {
-                padding-left: 5rem;
-                padding-right: 5rem
-            }
-
-            .sm\:px-6 {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem
-            }
-
-            .sm\:pl-4 {
-                padding-left: 1rem
-            }
-
-            .sm\:text-4xl {
-                font-size: 2.25rem;
-                line-height: 2.5rem
-            }
-
-            .sm\:text-5xl {
-                font-size: 3rem;
-                line-height: 1
-            }
-
-            .sm\:text-lg {
-                font-size: 1.125rem;
-                line-height: 1.75rem
-            }
-        }
-
-        @media (min-width: 768px) {
-            .md\:absolute {
-                position: absolute
-            }
-
-            .md\:-ml-5 {
-                margin-left: -1.25rem
-            }
-
-            .md\:ml-5 {
-                margin-left: 1.25rem
-            }
-
-            .md\:mt-5 {
-                margin-top: 1.25rem
-            }
-
-            .md\:mb-0 {
-                margin-bottom: 0px
-            }
-
-            .md\:ml-8 {
-                margin-left: 2rem
-            }
-
-            .md\:max-w-3xl {
-                max-width: 48rem
-            }
-
-            .md\:flex-row {
-                flex-direction: row
-            }
-
-            .md\:border-l {
-                border-left-width: 1px
-            }
-
-            .md\:border-gray-200 {
-                --tw-border-opacity: 1;
-                border-color: rgb(229 231 235 / var(--tw-border-opacity))
-            }
-
-            .md\:px-0 {
-                padding-left: 0px;
-                padding-right: 0px
-            }
-
-            .md\:px-32 {
-                padding-left: 8rem;
-                padding-right: 8rem
-            }
-
-            .md\:py-0 {
-                padding-top: 0px;
-                padding-bottom: 0px
-            }
-
-            .md\:pl-8 {
-                padding-left: 2rem
-            }
-
-            .md\:text-center {
-                text-align: center
-            }
-
-            .md\:text-5xl {
-                font-size: 3rem;
-                line-height: 1
-            }
-
-            .md\:text-6xl {
-                font-size: 3.75rem;
-                line-height: 1
-            }
-
-            .md\:text-xl {
-                font-size: 1.25rem;
-                line-height: 1.75rem
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .lg\:order-1 {
-                order: 1
-            }
-
-            .lg\:mb-0 {
-                margin-bottom: 0px
-            }
-
-            .lg\:mt-0 {
-                margin-top: 0px
-            }
-
-            .lg\:inline {
-                display: inline
-            }
-
-            .lg\:w-1\/2 {
-                width: 50%
-            }
-
-            .lg\:w-auto {
-                width: auto
-            }
-
-            .lg\:max-w-full {
-                max-width: 100%
-            }
-
-            .lg\:max-w-md {
-                max-width: 28rem
-            }
-
-            .lg\:items-center {
-                align-items: center
-            }
-
-            .lg\:justify-end {
-                justify-content: flex-end
-            }
-
-            .lg\:justify-center {
-                justify-content: center
-            }
-
-            .lg\:px-16 {
-                padding-left: 4rem;
-                padding-right: 4rem
-            }
-
-            .lg\:px-8 {
-                padding-left: 2rem;
-                padding-right: 2rem
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .xl\:mb-6 {
-                margin-bottom: 1.5rem
-            }
-
-            .xl\:py-3 {
-                padding-top: 0.75rem;
-                padding-bottom: 0.75rem
-            }
-
-            .xl\:text-6xl {
-                font-size: 3.75rem;
-                line-height: 1
-            }
-        }
-    </style>
+    @vite('resources/css/app.css')
 </head>
-<body class="antialiased">
-<section class="w-full px-8 text-gray-700 bg-white">
-    <div class="container flex flex-col flex-wrap items-center justify-between py-5 mx-auto md:flex-row max-w-7xl">
-        <div class="relative flex flex-col md:flex-row">
-            <a href="#_" class="flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0">
-                <span class="mx-auto text-xl font-black leading-none text-gray-900 select-none">tails<span class="text-indigo-600" data-primary="indigo-600">.</span></span>
-            </a>
-            <nav class="flex flex-wrap items-center mb-5 text-base md:mb-0 md:pl-8 md:ml-8 md:border-l md:border-gray-200">
-                <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">Home</a>
-                <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">Features</a>
-                <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">Pricing</a>
-                <a href="#_" class="mr-5 font-medium leading-6 text-gray-600 hover:text-gray-900">Blog</a>
-            </nav>
-        </div>
 
-        <div class="inline-flex items-center ml-5 space-x-6 lg:justify-end">
-            <a href="#" class="text-base font-medium leading-6 text-gray-600 whitespace-no-wrap transition duration-150 ease-in-out hover:text-gray-900">
-                Sign in
-            </a>
-            <a href="#" class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-indigo-600 border border-transparent rounded-md shadow-sm hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" data-rounded="rounded-md" data-primary="indigo-600">
-                Sign up
-            </a>
-        </div>
-    </div>
-</section>
-<section class="px-2 pt-32 bg-white md:px-0">
-    <div class="container items-center max-w-6xl px-5 mx-auto space-y-6 text-center">
-        <h1 class="text-4xl font-extrabold tracking-tight text-left text-gray-900 sm:text-5xl md:text-6xl md:text-center">
-            <span class="block">Diego Barrera&nbsp;<div class=""><span class="block mt-1 text-purple-500 lg:inline lg:mt-0" data-primary="purple-500">Fullstack Developer</span></div></span>
-        </h1>
+<body class="antialiased font-sans bg-circuit-pattern">
+<section class="min-h-screen w-full px-3 md:px-4">
+    <div class="container grid grid-cols-12 md:gap-10 justify-between">
+        <div class="col-span-12 lg:col-span-4 lg:mt-44">
+            <div class="w-full mb-6 lg:mb-0 mx-auto relative bg-blue-100 text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
+                <img src="{{ asset('images/avatar.jpeg') }}" alt="Diego Barrera" class="absolute left-[50%] transform -translate-x-[50%] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]" width="240" height="240">
+                <div class="pt-[100px] pb-6">
+                    <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-3xl text-center my-5">
+                        <span class="block">Diego Barrera</span>
+                        <span class="block mt-1 text-purple-500 lg:inline lg:mt-0">Fullstack Developer</span>
+                    </h1>
+                    <div class="flex justify-center space-x-3">
+                        <a href="https://twitter.com/erdiegoant" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
+                                <span class="socialbtn text-[#1C9CEA]">
+                                    <svg class="w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>                                </span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/erdiegoant/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                <span class="socialbtn text-[#0072b1]">
+                                    <svg class="w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>                                </span>
+                        </a>
+                        <a href="https://github.com/erdiegoant" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                                <span class="socialbtn text-[#24292f]">
+                                    <svg class="w-4 h-4" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>                                </span>
+                        </a>
 
-    </div>
-    <div class="container items-center max-w-4xl px-5 mx-auto mt-16 text-center">
-        <img src="https://cdn.devdojo.com/images/november2020/hero-image.png" class="">
-    </div>
-</section>
-<section class="py-20 bg-gray-50">
-    <div class="container items-center max-w-6xl px-4 px-10 mx-auto sm:px-20 md:px-32 lg:px-16">
-        <div class="flex flex-wrap items-center -mx-3">
-            <div class="order-1 w-full px-3 lg:w-1/2 lg:order-0">
-                <div class="w-full lg:max-w-md">
-                    <h2 class="mb-4 text-3xl font-bold leading-tight tracking-tight sm:text-4xl font-heading">In love with TALL and VILT stacks</h2>
-                    <p class="mb-4 font-medium tracking-tight text-gray-400 xl:mb-6">It's never been easier to build a business of your own. Our tools will help you with the following:</p>
-                    <ul>
-                        <li class="flex items-center py-2 space-x-4 xl:py-3">
-                            <svg class="w-8 h-8 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
-                            </svg>
-                            <span class="font-medium text-gray-500">Faster Processing and Delivery</span>
-                        </li>
-                        <li class="flex items-center py-2 space-x-4 xl:py-3">
-                            <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                            </svg>
-                            <span class="font-medium text-gray-500">Out of the Box Tracking and Monitoring</span>
-                        </li>
-                        <li class="flex items-center py-2 space-x-4 xl:py-3">
-                            <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                            <span class="font-medium text-gray-500">100% Protection and Security for Your App</span>
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="p-7 rounded-2xl mt-7 bg-indigo-200">
+                        <div class="flex border-b border-blue-100 py-2.5">
+                                    <span class="w-10 h-10 rounded-lg flex justify-center items-center bg-white text-brand-icon-icon4 shadow-md">
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
+</svg>                                    </span>
+                            <div class="text-left ml-2.5">
+                                <p class="text-xs text-brand-gray">Location</p>
+                                <p>Colombia, Medellin</p>
+                            </div>
+                        </div>
+                        <div class="flex border-b border-blue-100 py-2.5">
+                                    <span class="w-10 h-10 rounded-lg flex justify-center items-center bg-white text-brand-icon-icon1 shadow-md">
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path d="M21 6.375c0 2.692-4.03 4.875-9 4.875S3 9.067 3 6.375 7.03 1.5 12 1.5s9 2.183 9 4.875z"></path>
+  <path d="M12 12.75c2.685 0 5.19-.586 7.078-1.609a8.283 8.283 0 001.897-1.384c.016.121.025.244.025.368C21 12.817 16.97 15 12 15s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.285 8.285 0 001.897 1.384C6.809 12.164 9.315 12.75 12 12.75z"></path>
+  <path d="M12 16.5c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 001.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 001.897 1.384C6.809 15.914 9.315 16.5 12 16.5z"></path>
+  <path d="M12 20.25c2.685 0 5.19-.586 7.078-1.609a8.282 8.282 0 001.897-1.384c.016.121.025.244.025.368 0 2.692-4.03 4.875-9 4.875s-9-2.183-9-4.875c0-.124.009-.247.025-.368a8.284 8.284 0 001.897 1.384C6.809 19.664 9.315 20.25 12 20.25z"></path>
+</svg>                                    </span>
+                            <div class="text-left ml-2.5">
+                                <p class="text-xs text-brand-gray">Tech Stack</p>
+                                <p>Laravel💙</p>
+                                <p>VILT and TALL💙</p>
+                                <p>Flutter💙</p>
+                            </div>
+                        </div>
+                        <div class="flex py-2.5">
+                                    <span class="w-10 h-10 rounded-lg flex justify-center items-center bg-white text-brand-icon-icon2 shadow-md">
+                                        <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM6.262 6.072a8.25 8.25 0 1010.562-.766 4.5 4.5 0 01-1.318 1.357L14.25 7.5l.165.33a.809.809 0 01-1.086 1.085l-.604-.302a1.125 1.125 0 00-1.298.21l-.132.131c-.439.44-.439 1.152 0 1.591l.296.296c.256.257.622.374.98.314l1.17-.195c.323-.054.654.036.905.245l1.33 1.108c.32.267.46.694.358 1.1a8.7 8.7 0 01-2.288 4.04l-.723.724a1.125 1.125 0 01-1.298.21l-.153-.076a1.125 1.125 0 01-.622-1.006v-1.089c0-.298-.119-.585-.33-.796l-1.347-1.347a1.125 1.125 0 01-.21-1.298L9.75 12l-1.64-1.64a6 6 0 01-1.676-3.257l-.172-1.03z" clip-rule="evenodd"></path>
+</svg>                                    </span>
+                            <div class="text-left ml-2.5">
+                                <p class="text-xs text-brand-gray">Availability</p>
+                                <p>Remote, Local</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-full px-3 mb-12 lg:w-1/2 order-0 lg:order-1 lg:mb-0">
-                <img class="mx-auto sm:max-w-sm lg:max-w-full" src="https://cdn.devdojo.com/images/november2020/feature-graphic.png" alt="feature image">
+        </div>
+
+        <div class="col-span-12 lg:col-span-8 lg:mt-[36px] mb-10">
+            <div class="rounded-[20px] bg-blue-100">
+                <div class="py-6 md:pt-12 md:py-12 px-6 md:px-10 lg:px-14 relative">
+
+                    <h1 class="relative inline-block text-5xl font-bold scale-100 after:absolute after:top-1/2 after:h-0.5 after:translate-y-1/2">About Me</h1>
+                    <div class="lg:grid grid-cols-12 md:gap-10 pt-5 items-center">
+                        <div class="col-span-12 space-y-2.5">
+                            <p class="text-brand-gray leading-7">
+                                Hey! I'm Tobias, a full-stack software developer, database specialist and educator from Germany.
+                                I primarily work with Laravel, MySQL or PostgreSQL and various technologies on the frontend.
+                            </p>
+                            <p class="text-brand-gray leading-7 mt-2.5">
+                                In my first year of programming, I slowed down an application to multi-second response times with a single slow SQL query.
+                                This experience sparked my desire to learn all about databases and their performance.
+                                In the past 15+ years, I became a database expert with a lot of expertise in the architectures and quirks of many database systems.
+                                My favorite part of databases is that feeling, when you find and optimize all the slow queries that the application feels much more speedy afterward.
+                            </p>
+                            <p class="text-brand-gray leading-7 mt-2.5">
+                                At present, I use most of my time working with databases: I help development teams fix their performance problems, teach advanced SQL features and build tools to better work with databases.
+                                As a full-stack developer and database engineer, I am the missing link between a developer's approach and the knowledge of a database expert to know more efficient ways to solve a problem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2 class="text-[35px] font-bold font-serif pt-12 pb-5">
+                        What I offer
+                    </h2>
+                    <div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2">
+                        <div class="about-box bg-brand-color1-light">
+                            <div class="text-brand-color1">
+                                <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-[22px] font-semibold">
+                                    Performance Tuning
+                                </h3>
+                                <p class="leading-7 text-brand-gray">
+                                    I can identify slow queries and suggest indexes or schema changes to fix them.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-box bg-brand-color2-light">
+                            <div class="text-brand-color2">
+                                <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"></path>
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-[22px] font-semibold">
+                                    Migration
+                                </h3>
+                                <p class="leading-7 text-brand-gray">
+                                    I can assist you in planning a switch to another database or a complex schema migration.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-box bg-brand-color4-light">
+                            <div class="text-brand-color4">
+                                <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"></path>
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-[22px] font-semibold">
+                                    Training
+                                </h3>
+                                <p class="leading-7 text-brand-gray">
+                                    I can train your developers in many different topics tailored to your needs.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-box bg-brand-color3-light">
+                            <div class="text-brand-color3">
+                                <svg class="h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"></path>
+                                </svg>
+                            </div>
+                            <div class="space-y-2">
+                                <h3 class="text-[22px] font-semibold">
+                                    Guidance
+                                </h3>
+                                <p class="leading-7 text-brand-gray">
+                                    I offer database expertise for all questions and problems that may appear.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-[35px] font-bold font-serif pt-12 pb-5">
+                        My Projects
+                    </h2>
+                    <div class="flex flex-col md:block md:columns-2 md:gap-5">
+                        <div class="order-1 rounded-lg bg-[#fff0f0] p-6 break-inside-avoid-column">
+                            <div class="drop-shadow-lg">
+                                <div class="overflow-hidden rounded-lg">
+                                    <a href="https://sqlfordevs.com" target="_blank" rel="noopener noreferrer">
+                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-sqlfordevs@2x-97255ec6.jpg" width="612" height="458" alt="SQL For Devs">
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="https://sqlfordevs.com" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
+                                <h3>SQL For Devs</h3>
+                            </a>
+                            <span class="leading-relaxed text-brand-gray mt-2 block">
+                Most developers don't know the more in-depth parts of databases.
+                Therefore, I frequently share lesser-known tips and knowledge for them.
+            </span>
+                        </div>
+                        <div class="order-3 rounded-lg bg-[#fffae9] p-6 mt-5 break-inside-avoid-column">
+                            <div class="drop-shadow-lg">
+                                <div class="overflow-hidden rounded-lg">
+                                    <a href="https://stateoflaravel.com" target="_blank" rel="noopener noreferrer">
+                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-stateoflaravel@2x-578489ed.jpg" width="612" height="344" alt="State Of Laravel">
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="https://stateoflaravel.com" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
+                                <h3>State of Laravel</h3>
+                            </a>
+                            <span class="leading-relaxed text-brand-gray mt-2 block">
+                Laravel is currently the most popular PHP framework and is used in various ways.
+                My yearly survey reveals the numerous technologies and development practices being used and how trends change.
+            </span>
+                        </div>
+                        <div class="order-2 rounded-lg bg-[#fff3fc] p-6 mt-5 break-inside-avoid-column">
+                            <div class="drop-shadow-lg">
+                                <div class="overflow-hidden rounded-lg">
+                                    <a href="https://stackbricks.app/" target="_blank" rel="noopener noreferrer">
+                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-stackbricks@2x-5de34eaf.jpg" width="612" height="344" alt="StackBricks">
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="https://stackbricks.app/" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
+                                <h3>StackBricks</h3>
+                            </a>
+                            <span class="leading-relaxed text-brand-gray mt-2 block">
+                Running many databases and versions on a development machine is still complicated.
+                With StackBricks, I am working on a free application to simplify this.
+            </span>
+                        </div>
+                        <div class="order-4 rounded-lg bg-[#f4f4ff] p-6 mt-5 break-inside-avoid-column">
+                            <div class="drop-shadow-lg">
+                                <div class="overflow-hidden rounded-lg">
+                                    <a href="https://github.com/tpetry" target="_blank" rel="noopener noreferrer">
+                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-github@2x-9c15a11a.jpg" width="612" height="458" alt="Open Source">
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="https://github.com/tpetry" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
+                                <h3>Open Source</h3>
+                            </a>
+                            <span class="leading-relaxed text-brand-gray mt-2 block">
+                Many open-source libraries are the foundation of all the applications we build.
+                Like numerous other developers, I participate in that tradition to share stuff others can use.
+            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<section class="py-20 bg-white">
-    <div class="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8 tails-relative">
-        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl xl:text-6xl">
-            The New Standard for Design
-        </h2>
-        <p class="max-w-md mx-auto mt-3 text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Use our award-winning tools to help you maximize your profits. We've uncovered the correct recipe for converting visitors into customers.
-        </p>
-        <div class="flex justify-center mt-8 space-x-3">
-            <a href="#" class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-700" data-primary="indigo-600" data-rounded="rounded-md">Hire Me</a>
-        </div>
-    </div>
-</section>
-<section class="text-gray-700 bg-white body-font">
-    <div class="container flex flex-col items-center px-8 py-8 mx-auto max-w-7xl sm:flex-row">
-        <a href="#_" class="text-xl font-black leading-none text-gray-900 select-none logo">tails<span class="text-indigo-600">.</span></a>
-        <p class="mt-4 text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 sm:mt-0">© 2023 erdiegoant&nbsp;</p>
-        <span class="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0 sm:justify-start">
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Facebook</span>
-
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Instagram</span>
-
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Twitter</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" class=""></path>
-                </svg>
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">GitHub</span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" class=""></path>
-                </svg>
-            </a>
-
-            <a href="#" class="text-gray-400 hover:text-gray-500">
-                <span class="sr-only">Dribbble</span>
-            </a>
-        </span>
-    </div>
-</section>
-
-<script src="//unpkg.com/alpinejs" defer></script>
 </body>
+
 </html>
