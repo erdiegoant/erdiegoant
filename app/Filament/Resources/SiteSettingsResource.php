@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\SiteSettingsResource\Pages;
-use App\Filament\Resources\SiteSettingsResource\RelationManagers;
 use App\Models\SiteSettings;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -32,7 +31,7 @@ class SiteSettingsResource extends Resource
                         Forms\Components\Repeater::make('content')
                             ->schema([
                                 Forms\Components\Textarea::make('text')
-                                ->rows(3),
+                                    ->rows(3),
                             ])
                             ->reorderable(false)
                             ->columns('1'),
