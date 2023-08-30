@@ -24,8 +24,19 @@ class SiteSettingsResource extends Resource
                     ->schema([
                         Forms\Components\TextInput::make('title'),
                         Forms\Components\TextInput::make('description'),
+                    ]),
+                Forms\Components\Section::make('Images')
+                    ->schema([
+                        Forms\Components\SpatieMediaLibraryFileUpload::make('avatar')
+                            ->collection('avatar')
+                            ->responsiveImages()
+                            ->rules('image'),
+                        Forms\Components\SpatieMediaLibraryFileUpload::make('social')
+                            ->collection('social')
+                            ->rules('image|dimensions:min_width=1200,min_height=630'),
                     ])
-                    ->aside(),
+                    ->columns(2)
+                    ->collapsible(),
                 Forms\Components\Section::make('Site Content')
                     ->schema([
                         Forms\Components\Repeater::make('content')
@@ -36,7 +47,7 @@ class SiteSettingsResource extends Resource
                             ->reorderable(false)
                             ->columns('1'),
                     ])
-                    ->aside(),
+                    ->collapsible(),
             ]);
     }
 
@@ -44,6 +55,10 @@ class SiteSettingsResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\SpatieMediaLibraryImageColumn::make('avatar')
+                    ->collection('avatar'),
+                Tables\Columns\SpatieMediaLibraryImageColumn::make('social')
+                    ->collection('social'),
                 Tables\Columns\TextColumn::make('title'),
                 Tables\Columns\TextColumn::make('description'),
             ])

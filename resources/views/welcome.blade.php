@@ -8,11 +8,11 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ $siteSettings->title }}">
     <meta property="og:description" content="{{ $siteSettings->description }}">
-    {{--    <meta property="og:image" content="https://tpetry.me/social.png">--}}
+        <meta property="og:image" content="{{ $social }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $siteSettings->title }}">
     <meta name="twitter:description" content="{{ $siteSettings->description }}">
-    {{--    <meta name="twitter:image" content="https://tpetry.me/social.png">--}}
+        <meta name="twitter:image" content="{{ $social }}">
 
     <title>{{ $siteSettings->title }}</title>
 
@@ -29,7 +29,9 @@
     <div class="container mx-auto grid grid-cols-12 md:gap-10 justify-between">
         <div class="col-span-12 lg:col-span-4 lg:mt-44">
             <div class="w-full mb-6 lg:mb-0 mx-auto relative bg-blue-100 text-center px-6 rounded-[20px] mt-[180px] md:mt-[220px] lg:mt-0">
-                <img src="{{ asset('images/avatar.jpeg') }}" alt="Diego Barrera" class="absolute left-[50%] transform -translate-x-[50%] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px]" width="240" height="240">
+                <div class="absolute left-[50%] transform -translate-x-[50%] drop-shadow-xl mx-auto rounded-[20px] -mt-[140px] w-[240px] h-[240px] overflow-hidden">
+                    {{ $avatar }}
+                </div>
                 <div class="pt-[100px] pb-6">
                     <h1 class="text-5xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-3xl text-center my-5">
                         <span class="block">Diego Barrera</span>
