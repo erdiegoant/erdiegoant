@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Project;
 use App\Models\SiteSettings;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -14,10 +15,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        // Create default projects
+        Project::factory()->count(10)->create();
+
+        if (User::count() > 0 && SiteSettings::count() > 0) {
+            return;
+        }
+
+        // Create default user and site contents
         User::create([
             'name' => 'Diego Barrera',
             'email' => 'erdiegoant@gmail.com',
-            'password' => bcrypt('TFNAmHiHuAW8io4o^V'),
+            'password' => app()->isProduction() ? bcrypt('TFNAmHiHuAW8io4o^V') : bcrypt('12341234'),
         ]);
 
         SiteSettings::create([
