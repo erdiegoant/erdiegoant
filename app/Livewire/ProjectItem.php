@@ -9,8 +9,11 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 class ProjectItem extends Component
 {
     public Project $project;
+
     public bool $isFirst;
+
     public string $background;
+
     public ?Media $image = null;
 
     public function mount(): void

@@ -8,7 +8,7 @@ use Livewire\Component;
 class ProjectsSection extends Component
 {
     /**
-     * @var Project[] $projects
+     * @var Project[]
      */
     public $projects = [];
 

@@ -3,7 +3,6 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
-use App\Livewire\SpatieMediaLibraryMarkdownEditor;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
