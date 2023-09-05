@@ -176,75 +176,7 @@
                         </div>
                     </div>
 
-                    <h2 class="text-[35px] font-bold font-serif pt-12 pb-5">
-                        My Projects
-                    </h2>
-                    <div class="flex flex-col md:block md:columns-2 md:gap-5">
-                        <div class="order-1 rounded-lg bg-[#fff0f0] p-6 break-inside-avoid-column">
-                            <div class="drop-shadow-lg">
-                                <div class="overflow-hidden rounded-lg">
-                                    <a href="https://sqlfordevs.com" target="_blank" rel="noopener noreferrer">
-                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-sqlfordevs@2x-97255ec6.jpg" width="612" height="458" alt="SQL For Devs">
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="https://sqlfordevs.com" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
-                                <h3>SQL For Devs</h3>
-                            </a>
-                            <span class="leading-relaxed text-brand-gray mt-2 block">
-                Most developers don't know the more in-depth parts of databases.
-                Therefore, I frequently share lesser-known tips and knowledge for them.
-            </span>
-                        </div>
-                        <div class="order-3 rounded-lg bg-[#fffae9] p-6 mt-5 break-inside-avoid-column">
-                            <div class="drop-shadow-lg">
-                                <div class="overflow-hidden rounded-lg">
-                                    <a href="https://stateoflaravel.com" target="_blank" rel="noopener noreferrer">
-                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-stateoflaravel@2x-578489ed.jpg" width="612" height="344" alt="State Of Laravel">
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="https://stateoflaravel.com" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
-                                <h3>State of Laravel</h3>
-                            </a>
-                            <span class="leading-relaxed text-brand-gray mt-2 block">
-                Laravel is currently the most popular PHP framework and is used in various ways.
-                My yearly survey reveals the numerous technologies and development practices being used and how trends change.
-            </span>
-                        </div>
-                        <div class="order-2 rounded-lg bg-[#fff3fc] p-6 mt-5 break-inside-avoid-column">
-                            <div class="drop-shadow-lg">
-                                <div class="overflow-hidden rounded-lg">
-                                    <a href="https://stackbricks.app/" target="_blank" rel="noopener noreferrer">
-                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-stackbricks@2x-5de34eaf.jpg" width="612" height="344" alt="StackBricks">
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="https://stackbricks.app/" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
-                                <h3>StackBricks</h3>
-                            </a>
-                            <span class="leading-relaxed text-brand-gray mt-2 block">
-                Running many databases and versions on a development machine is still complicated.
-                With StackBricks, I am working on a free application to simplify this.
-            </span>
-                        </div>
-                        <div class="order-4 rounded-lg bg-[#f4f4ff] p-6 mt-5 break-inside-avoid-column">
-                            <div class="drop-shadow-lg">
-                                <div class="overflow-hidden rounded-lg">
-                                    <a href="https://github.com/tpetry" target="_blank" rel="noopener noreferrer">
-                                        <img class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg" src="https://tpetry.me/build/assets/project-github@2x-9c15a11a.jpg" width="612" height="458" alt="Open Source">
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="https://github.com/tpetry" target="_blank" rel="noopener noreferrer" class="pt-5 text-[22px] font-semibold text-brand-gray hover:text-[#FA5252] duration-300 transition block">
-                                <h3>Open Source</h3>
-                            </a>
-                            <span class="leading-relaxed text-brand-gray mt-2 block">
-                Many open-source libraries are the foundation of all the applications we build.
-                Like numerous other developers, I participate in that tradition to share stuff others can use.
-            </span>
-                        </div>
-                    </div>
+                    <livewire:projects-section />
                 </div>
             </div>
         </div>

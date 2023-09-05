@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('description');
             $table->text('content');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->boolean('active')->default(true);
             $table->string('background')->nullable();
             $table->timestamps();

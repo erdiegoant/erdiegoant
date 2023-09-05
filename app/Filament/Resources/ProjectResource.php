@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
+use App\Livewire\SpatieMediaLibraryMarkdownEditor;
 use App\Models\Project;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -10,6 +11,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 
 class ProjectResource extends Resource
 {
@@ -56,7 +58,7 @@ class ProjectResource extends Resource
                     ->responsiveImages()
                     ->columnSpan(['lg' => 3]),
 
-                Forms\Components\Section::make('Content')
+                Forms\Components\Section::make()
                     ->schema([
                         Forms\Components\MarkdownEditor::make('content')
                             ->required(),
@@ -101,11 +103,21 @@ class ProjectResource extends Resource
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
+                    Tables\Actions\BulkAction::make('Toggle Active')
+                        ->requiresConfirmation()
+                        ->icon('heroicon-o-check')
+                        ->action(function (Collection $records) {
+                            /** @var Collection<Project> $records */
+                            return $records->each(fn (Project $record) => $record->update(['active' => ! $record->active]));
+                        }),
                 ]),
             ])
             ->emptyStateActions([
                 Tables\Actions\CreateAction::make(),
-            ]);
+            ])
+            ->persistSearchInSession()
+            ->persistFiltersInSession()
+            ->persistSortInSession();
     }
 
     public static function getRelations(): array
