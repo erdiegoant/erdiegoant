@@ -34,6 +34,7 @@ class ProjectResource extends Resource
                                     ->columnSpan(1),
                                 Forms\Components\TextInput::make('slug')
                                     ->disabled()
+                                    ->dehydrated(false)
                                     ->columnSpan(1),
                                 Forms\Components\Textarea::make('description')
                                     ->required()
@@ -46,7 +47,7 @@ class ProjectResource extends Resource
                 Forms\Components\Section::make('Settings')
                     ->schema([
                         Forms\Components\ColorPicker::make('background'),
-                        Forms\Components\TextInput::make('url'),
+                        Forms\Components\TextInput::make('url')->nullable(),
                         Forms\Components\Toggle::make('active'),
                     ])
                     ->columnSpan(['lg' => 1]),

@@ -2,7 +2,7 @@
     @if(!is_null($image))
         <div class="drop-shadow-lg">
             <div class="overflow-hidden rounded-lg">
-                <a href="{{ $project->url }}" target="_blank" rel="noopener noreferrer">
+                <a @if(!empty($project->url)) href="{{ $project->url }}" target="_blank" rel="noopener noreferrer" @endif>
                     <div class="cursor-pointer transition duration-200 ease-in-out transform hover:scale-110 rounded-lg flex justify-center">
                         {{ $image }}
                     </div>
