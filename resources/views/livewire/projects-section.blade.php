@@ -1,5 +1,5 @@
 <div>
-    @if(count($projects) > 1)
+    @if(count($projects) > 0)
         <h2 class="text-[35px] font-bold font-serif pt-12 pb-5">
             My Projects
         </h2>
