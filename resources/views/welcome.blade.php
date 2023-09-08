@@ -86,7 +86,7 @@
 </svg>                                    </span>
                             <div class="text-left ml-2.5">
                                 <p class="text-xs text-brand-gray">Availability</p>
-                                <p>Remote, Local</p>
+                                <p>Remote</p>
                             </div>
                         </div>
                     </div>
