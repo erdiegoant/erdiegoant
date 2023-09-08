@@ -39,10 +39,15 @@ class ProjectResource extends Resource
                                 Forms\Components\Textarea::make('description')
                                     ->required()
                                     ->columnSpan(2),
-                            ])
-                            ->columns(2),
+                            ]),
                     ])
-                    ->columnSpan(['lg' => fn (?Project $record) => $record === null ? 3 : 2]),
+                    ->columnSpan(['lg' => 3]),
+
+                Forms\Components\SpatieMediaLibraryFileUpload::make('image')
+                    ->collection('projects')
+                    ->rules(['image', 'max:1024'])
+                    ->responsiveImages()
+                    ->columnSpan(['lg' => 2]),
 
                 Forms\Components\Section::make('Settings')
                     ->schema([
@@ -52,16 +57,10 @@ class ProjectResource extends Resource
                     ])
                     ->columnSpan(['lg' => 1]),
 
-                Forms\Components\SpatieMediaLibraryFileUpload::make('image')
-                    ->collection('projects')
-                    ->rules(['image', 'max:1024'])
-                    ->responsiveImages()
-                    ->columnSpan(['lg' => 3]),
-
                 Forms\Components\Section::make()
                     ->schema([
                         Forms\Components\MarkdownEditor::make('content')
-                            ->required(),
+                            ->nullable(),
                     ]),
             ])
             ->columns([

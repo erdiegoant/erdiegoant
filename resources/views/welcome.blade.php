@@ -8,11 +8,11 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ $siteSettings->title }}">
     <meta property="og:description" content="{{ $siteSettings->description }}">
-        <meta property="og:image" content="{{ $social }}">
+    <meta property="og:image" content="{{ $social }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $siteSettings->title }}">
     <meta name="twitter:description" content="{{ $siteSettings->description }}">
-        <meta name="twitter:image" content="{{ $social }}">
+    <meta name="twitter:image" content="{{ $social }}">
 
     <title>{{ $siteSettings->title }}</title>
 
@@ -21,6 +21,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
 
     <!-- Styles -->
+    @livewireStyles
     @vite('resources/css/app.css')
 </head>
 
@@ -110,12 +111,13 @@
                         </div>
                     </div>
 
-                    <livewire:projects-section />
+                    <livewire:projects-section/>
                 </div>
             </div>
         </div>
     </div>
 </section>
+@livewireScripts
 </body>
 
 </html>
