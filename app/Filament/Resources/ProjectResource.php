@@ -4,29 +4,32 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\ProjectResource\Pages;
 use App\Models\Project;
+use Filament\Actions;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
+use UnitEnum;
 
 class ProjectResource extends Resource
 {
     protected static ?string $model = Project::class;
 
-    protected static ?string $navigationGroup = 'Site';
+    protected static UnitEnum|string|null $navigationGroup = 'Site';
 
     protected static ?string $recordTitleAttribute = 'title';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
-                Forms\Components\Group::make()
+                Schemas\Components\Group::make()
                     ->schema([
-                        Forms\Components\Section::make('Project Information')
+                        Schemas\Components\Section::make('Project Information')
                             ->schema([
                                 Forms\Components\TextInput::make('title')
                                     ->autofocus()
@@ -49,7 +52,7 @@ class ProjectResource extends Resource
                     ->responsiveImages()
                     ->columnSpan(['lg' => 2]),
 
-                Forms\Components\Section::make('Settings')
+                Schemas\Components\Section::make('Settings')
                     ->schema([
                         Forms\Components\ColorPicker::make('background'),
                         Forms\Components\TextInput::make('url')->nullable(),
@@ -57,7 +60,7 @@ class ProjectResource extends Resource
                     ])
                     ->columnSpan(['lg' => 1]),
 
-                Forms\Components\Section::make()
+                Schemas\Components\Section::make()
                     ->schema([
                         Forms\Components\MarkdownEditor::make('content')
                             ->nullable(),
@@ -97,12 +100,12 @@ class ProjectResource extends Resource
                     ->query(fn (Builder $query) => $query->where('active', true)),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\BulkAction::make('Toggle Active')
+                Actions\BulkActionGroup::make([
+                    Actions\DeleteBulkAction::make(),
+                    Actions\BulkAction::make('Toggle Active')
                         ->requiresConfirmation()
                         ->icon('heroicon-o-check')
                         ->action(function (Collection $records) {
@@ -110,9 +113,6 @@ class ProjectResource extends Resource
                             return $records->each(fn (Project $record) => $record->update(['active' => ! $record->active]));
                         }),
                 ]),
-            ])
-            ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
             ])
             ->persistSearchInSession()
             ->persistFiltersInSession()

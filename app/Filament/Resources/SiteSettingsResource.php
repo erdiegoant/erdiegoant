@@ -4,28 +4,31 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\SiteSettingsResource\Pages;
 use App\Models\SiteSettings;
+use Filament\Actions;
 use Filament\Forms;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
+use Filament\Schemas;
+use Filament\Schemas\Schema;
 use Filament\Tables;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class SiteSettingsResource extends Resource
 {
     protected static ?string $model = SiteSettings::class;
 
-    protected static ?string $navigationGroup = 'Settings';
+    protected static UnitEnum|string|null $navigationGroup = 'Settings';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
+        return $schema
             ->schema([
-                Forms\Components\Section::make('Site Settings')
+                Schemas\Components\Section::make('Site Settings')
                     ->schema([
                         Forms\Components\TextInput::make('title'),
                         Forms\Components\TextInput::make('description'),
                     ]),
-                Forms\Components\Section::make('Images')
+                Schemas\Components\Section::make('Images')
                     ->schema([
                         Forms\Components\SpatieMediaLibraryFileUpload::make('avatar')
                             ->collection('avatar')
@@ -37,7 +40,7 @@ class SiteSettingsResource extends Resource
                     ])
                     ->columns(2)
                     ->collapsible(),
-                Forms\Components\Section::make('Site Content')
+                Schemas\Components\Section::make('Site Content')
                     ->schema([
                         Forms\Components\Repeater::make('content')
                             ->schema([
@@ -66,13 +69,10 @@ class SiteSettingsResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                Actions\EditAction::make(),
             ])
             ->bulkActions([
                 //
-            ])
-            ->emptyStateActions([
-                Tables\Actions\CreateAction::make(),
             ]);
     }
 
