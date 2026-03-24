@@ -53,7 +53,7 @@ My recent focus has been leading the migration of a large legacy PHP 7.0 system 
 
 ## Work Experience
 
-### Lead Software Engineer — [FullStack Labs](https://www.fullstacklabs.co), Texas, USA (Remote)
+### Lead Software Engineer — FullStack Labs, Texas, USA (Remote)
 `08/2021 – 01/2026`
 
 - Led development on complex legacy PHP and Laravel systems, including major performance optimizations and large-scale refactors
@@ -188,6 +188,24 @@ A freelance project management API built with **Laravel 12 + Go**, designed arou
 - Full Docker Compose setup — `docker compose up --build -d` runs everything including migrations and seeding
 
 `Laravel 13 · PHP 8.5 · Go 1.23 · PostgreSQL 17 · Redis 7 · MinIO (S3) · Docker`
+
+---
+
+### [video-transcoder](https://github.com/erdiegoant/video-transcoder)
+
+A full-stack automated video trimmer and transcoder built to learn Go microservices architecture. Upload a video, configure trim/transcode/thumbnail operations, and a Go worker processes it asynchronously using FFmpeg — all orchestrated through a Laravel dashboard.
+
+**Features**
+- Three operation types: **transcode** (format/resolution), **trim** (start/end), **thumbnail** (frame extraction)
+- Video upload with per-user storage and monthly quota enforcement
+- Real-time job status dashboard with Livewire polling
+- HMAC-signed webhook callbacks between Go and Laravel
+- Concurrent job processing with a configurable goroutine pool
+- Graceful shutdown (SIGTERM-aware for Kubernetes pod termination)
+- Prometheus metrics endpoint on the Go worker
+- Full Docker Compose setup → Kubernetes deployment path
+
+`Laravel 13 · PHP 8.5 · Livewire 4 · Go 1.25 · FFmpeg · PostgreSQL 17 · Redis 7 · MinIO (S3) · Docker`
 
 ---
 
