@@ -209,6 +209,24 @@ A full-stack automated video trimmer and transcoder built to learn Go microservi
 
 ---
 
+### [go-whisper](https://github.com/erdiegoant/go-whisper)
+
+A Superwhisper-inspired voice dictation and translation app for macOS, built in Go. Press a hotkey, speak, press it again — your transcribed text is automatically pasted into whatever app is active. Runs entirely locally with no cloud or subscription required.
+
+**Features**
+- Toggle recording via ⌥Space (start/stop) with automatic paste on stop
+- Cancel mid-recording with Esc — nothing gets pasted
+- Cycle between transcription modes (raw, cleanup, formal, bullets, custom) using ⌥⇧K
+- Spanish → English translation using Whisper's native translation (no LLM required)
+- Optional LLM post-processing via Ollama for cleanup, rewriting, and custom prompts
+- Custom modes: define your own system prompts in `config.yaml`
+- Hot-reloadable config — change hotkeys or models without restarting
+- Menubar tray icon showing current mode and recording state
+
+`Go · whisper.cpp · Ollama · malgo (miniaudio) · fyne.io/systray · CGo · AppKit`
+
+---
+
 ## GitHub Stats
 
 ![Diego's GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=erdiegoant)
