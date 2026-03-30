@@ -1,6 +1,6 @@
 # Hi, I'm Diego Barrera 👋
 
-**Lead Software Engineer** · Full-Stack & Mobile Developer · Medellín, Colombia 🇨🇴
+**Senior Software Engineer** · Full-Stack & Mobile Developer · Medellín, Colombia 🇨🇴
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-erdiegoant-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/erdiegoant/)
 [![Email](https://img.shields.io/badge/Email-erdiegoant%40gmail.com-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:erdiegoant@gmail.com)
