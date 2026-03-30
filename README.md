@@ -176,7 +176,7 @@ Universidad Rafael Belloso Chacín (URBE) · Maracaibo, Venezuela · `2017`
 
 ### [freelance-flow](https://github.com/erdiegoant/freelance-flow)
 
-A freelance project management API built with **Laravel 12 + Go**, designed around a microservice architecture where a Go worker handles PDF generation asynchronously via a Redis queue.
+A freelance project management API built with **Laravel 13 + Go**, designed around a microservice architecture where a Go worker handles PDF generation asynchronously via a Redis queue.
 
 **Features**
 - Client, project, and time log management with hourly rate tracking
@@ -211,5 +211,6 @@ A full-stack automated video trimmer and transcoder built to learn Go microservi
 
 ## GitHub Stats
 
-![Diego's GitHub stats](https://github-readme-stats.vercel.app/api?username=erdiegoant&show_icons=true&theme=default&hide_border=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=erdiegoant&layout=compact&hide_border=true)
+![Diego's GitHub stats](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=erdiegoant)
+![Top Languages](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=erdiegoant)
+![Streak](https://github-readme-streak-stats.herokuapp.com/?user=erdiegoant&hide_border=true)
