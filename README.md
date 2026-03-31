@@ -216,14 +216,14 @@ A Superwhisper-inspired voice dictation and translation app for macOS, built in 
 **Features**
 - Toggle recording via ⌥Space (start/stop) with automatic paste on stop
 - Cancel mid-recording with Esc — nothing gets pasted
-- Cycle between transcription modes (raw, cleanup, formal, bullets, custom) using ⌥⇧K
+- Cycle between modes (Standard, Translate, custom) using ⌥⇧K
 - Spanish → English translation using Whisper's native translation (no LLM required)
-- Optional LLM post-processing via Ollama for cleanup, rewriting, and custom prompts
+- Optional LLM post-processing via Claude API for cleanup, formatting, and custom prompts
 - Custom modes: define your own system prompts in `config.yaml`
 - Hot-reloadable config — change hotkeys or models without restarting
 - Menubar tray icon showing current mode and recording state
 
-`Go · whisper.cpp · Ollama · malgo (miniaudio) · fyne.io/systray · CGo · AppKit`
+`Go · whisper.cpp · Claude API · malgo (miniaudio) · fyne.io/systray · CGo · AppKit · DarwinKit`
 
 ---
 
